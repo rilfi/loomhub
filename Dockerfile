@@ -3,7 +3,7 @@ FROM php:7.4-fpm-alpine
 RUN apk add --no-cache nginx wget
 
 FROM laravelsail/php74-composer
-RUN  exif 
+RUN  docker-php-ext-install exif 
 
 RUN mkdir -p /run/nginx
 
