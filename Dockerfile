@@ -1,6 +1,9 @@
-FROM php:7.4-fpm-alpine
+FROM php:7.4-fpm
 
-RUN apk add --no-cache nginx wget exif
+RUN apk add --no-cache nginx wget
+
+FROM laravelsail/php74-composer
+RUN  exif 
 
 RUN mkdir -p /run/nginx
 
